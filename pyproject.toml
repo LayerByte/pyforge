@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pyforge-toolkit"
+version = "1.0.0"
+description = "Modular developer and system utility toolkit"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+dependencies = [
+  "rich>=13.9,<15",
+  "typer>=0.15,<1",
+  "pydantic>=2.10,<3",
+  "psutil>=6.1,<8",
+  "httpx>=0.28,<1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3,<10", "pytest-cov>=6,<8", "ruff>=0.9,<1"]
+
+[project.scripts]
+pyforge = "pyforge.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["pyforge"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E9", "F"]
