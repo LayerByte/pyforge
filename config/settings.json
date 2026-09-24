@@ -1,0 +1,7 @@
+{
+  "theme": "dark",
+  "history_enabled": true,
+  "default_export_format": "json",
+  "http_timeout": 5.0,
+  "show_advanced_information": false
+}
