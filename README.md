@@ -119,7 +119,3 @@ network and certificate tools.
 ## Contributing
 
 Read `CONTRIBUTING.md`, keep changes focused, and add tests for behavior changes.
-
-## License
-
-PyForge is available under the MIT License. See `LICENSE`.
